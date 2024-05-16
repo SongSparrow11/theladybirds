@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	
+	<!-- load stylesheet -->
+	<link rel="stylesheet" href="css/style.css">
+	
+	<title>The Official Ladybirds Website</title>
+
+</head>
+
+<body>
+
+	<div id="popup">
+		<img id="image-popup" src="images/members-picture-taken.jpg">
+		<div id="x-button">x</div>
+	</div>
+
+	<div id="navbar">
+		
+		<a href="index.html">Home</a>
+		<a href="songs.html">Latest Hits</a>
+		<a href="members.html">About</a>
+		
+		<a id="contact-us" href="contact.html">Contact Us</a>
+		
+	</div>
+
+	<div id="banner">
+	
+		<img id="banner-image" src="images/main-banner.jpg">
+	
+		<h1 id="heading"><span id="hashtag">&#35;</span>Bringing people together.</h1>
+		
+	</div>
+	
+	<div id="about">
+	
+		<div class="pic-column">
+			<img class="side-pic" src="images/members-picture-taken.jpg" alt="The Ladybirds members getting their picture taken">
+			<img class="side-pic" src="images/zach-mastro-guitar.jpg" alt="The Ladybirds members getting their picture taken">
+			<img class="side-pic" src="images/ldybrds-cover.jpg" alt="The Ladybirds members getting their picture taken">
+		</div>
+		
+		
+		<h2>The Ladybirds</h2>
+		
+		<p>
+			The Ladybirds are an all-boy band based in Pittsburgh, Pennsylvania. The members are: Zach Mastro, lead vocalist;
+			Ernie Lee, side vocalist; Jonah Allkind, guitarist; and Zachary Haines, drummer boy. They write songs about girlfriends,
+			crushes, and love. Come to a Ladybirds concert near you and discover why so many people around the world adore this band!
+		</p>
+		
+		<h3>Members</h3>
+		
+		<p>
+			Zach Mastro is an outdoor-loving, risk-taking, quad-riding daredevil. Ernie Lee is a geography nerd; his famous quote is,
+			"We would all be nowhere without geography." Jonah Allkind writes the songs and enjoys card games and chess. Zachary Haines
+			loves to gamble and is addicted to candy cigarettes.
+		</p>
+		
+		<h3>How We Started</h3>
+		
+		<p>
+			The Ladybirds were first established in early 2024 by Sarah Allkind, Jonah Allkind's younger sister. They were and still are inspired by the Beatles, creating romantic albums for people to enjoy.
+		</p>
+		
+		<h3>Upcoming Concerts</h3>
+		
+		<p>
+			The Ladybirds perform at many places, but they mostly sing at Acrisure Stadium. Once they reached a total of 38,000 people to cheer and clap as Zach and Ernie sang their hearts out. The next upcoming live concert will be at Acrisure Stadium on Tuesday, May 23 at 7:30 PM. They, including Zach Mastro, will be taking autographs at the end, so this is a special opportunity!
+		</p>
+		
+	</div>
+	
+<script>
+
+const sidePics = document.querySelectorAll('.pic-column .side-pic');
+sidePics.forEach(function(sidePic) {
+	sidePic.addEventListener('click', (event) => showImage(event.currentTarget));
+});
+
+function showImage(image) {
+	const popup = document.querySelector('#popup');
+	const imagePopup = document.querySelector('#popup #image-popup');
+	console.log(imagePopup);
+	console.log(image);
+	popup.style.display = 'block';
+	imagePopup.src = image.src;
+	
+	const xButton = document.querySelector('#popup #x-button');
+	xButton.addEventListener('click', function(){
+		popup.style.display = 'none';
+	});
+}
+
+</script>
+
+</body>
+
+</html>
